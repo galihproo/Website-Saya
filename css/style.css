@@ -1,14 +1,31 @@
+html, body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 .container{
-    width: 800px;
+    width: 80vw;
     margin: 0 auto;
 }
 .header{
     background: #eee;
     min-height: 50px;
     text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .logo img{
-    width: 200px;
+    width: 60px;
+    height: 30px;
+    margin-left: 30px;
+}
+.menu {
+    margin-right: 30px;
 }
 .menu ul{
     padding: 0;
@@ -29,9 +46,10 @@ ul .submenu{
     border: 1px solid #ccc;
     text-align: left;
     position: absolute;
-    top: 10px;
-    left: 0;
+    top: 25px;
+    left: 20px;
     display: none;
+    z-index: 1;
 }
 ul .submenu li{
     display: block;
@@ -41,7 +59,6 @@ ul .submenu li a{
     padding: 5px 10px;
 }
 .jumbotron {
-    font-family: 'Raleway', sans-serif;
     width: 100%;
     height: 400px;
     padding: 80px 40px;
@@ -49,7 +66,7 @@ ul .submenu li a{
     text-align: center;
     color: white;
     background-color: #aaa;
-    background-image: url(jumbotronn.jpg);
+    background-image: url(../image/my_image.jpg);
     background-size: cover;
     position: relative;
 }
@@ -69,20 +86,51 @@ ul .submenu li a{
     background-color: #ddd;
     min-height: 500px;
     overflow: auto;
+    padding: 10px;
 }
 .content h2{
     text-align: center;
+}
+.thumbnail_wrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
 }
 .thumbnail {
     background-color: white;
     text-align: center;
     padding: 10px;
-    width: 225px;
+    width: 250px;
     margin: 10px;
-    float: left;
+    /*float: left;*/
 }
 .footer{
     background-color: #ccc;
     min-height: 50px;
     text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+}
+
+/*Responsive*/
+
+@media(max-width: 992px) {
+    .container {
+        width: 90vw;
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 100vw;
+    }
 }
